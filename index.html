@@ -13,10 +13,10 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 0 20px;
             background-color: var(--light-bg);
@@ -25,72 +25,56 @@
         header {
             background: var(--dark);
             color: white;
-            padding: 60px 40px;
+            padding: 50px 30px;
             text-align: center;
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 40px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: -1px;
-            text-transform: uppercase;
+        /* Essential for the Dashboard Crawler */
+        .post-list {
+            list-style: none;
+            padding: 0;
         }
 
-        header p {
-            opacity: 0.8;
-            font-weight: 300;
-            margin-top: 10px;
-        }
-
-        .container {
-            margin-top: 40px;
-        }
-
-        article {
+        .post-item {
             background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
         }
 
-        .post-meta {
-            font-size: 0.8rem;
+        .post-date {
+            display: block;
+            font-size: 0.85rem;
             color: #7f8c8d;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
-        article h2 {
-            margin: 10px 0;
+        .post-link {
+            font-size: 1.5rem;
             color: var(--dark);
-        }
-
-        article h2 a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        article h2 a:hover {
-            color: var(--primary);
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary);
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .post-link:hover {
+            color: var(--primary);
+        }
+
+        .post-excerpt {
+            margin-top: 10px;
+            color: #555;
         }
 
         footer {
             text-align: center;
             padding: 40px 0;
             color: #95a5a6;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -98,17 +82,31 @@
 
     <header>
         <h1>Using Sports as a Day Trading Job</h1>
-        <p>Strategies, Analytics, and Discipline with <strong>Caleb Murphy</strong></p>
+        <p>Analysis and Insights by <strong>Caleb Murphy</strong></p>
     </header>
 
-    <div class="container">
-        <main>
-            <article>
-                <div class="post-meta">January 14, 2026 • Market Analysis</div>
-                <h2><a href="#">The Transition: From Betting to Trading</a></h2>
-                <p>Most people view sports betting as gambling. I view it as a liquid marketplace where information is the primary currency. In this post, I break down how to apply the Sharpe Ratio to your sports portfolio...</p>
-                <a href="#" class="read-more">View Strategy →</a>
-            </article>
+    <main>
+        <ul class="post-list">
+            
+            <li class="post-item">
+                <span class="post-date">January 15, 2026</span>
+                <a class="post-link" href="post1.html">The Transition: From Betting to Trading</a>
+                <p class="post-excerpt">Understanding the shift from recreational gambling to a data-driven trading mindset in sports markets.</p>
+            </li>
 
-            <article>
-                <div class="post-meta">January 12, 2026 •
+            <li class="post-item">
+                <span class="post-date">January 14, 2026</span>
+                <a class="post-link" href="post2.html">Why Discipline Beats "The Big Win"</a>
+                <p class="post-excerpt">How bankroll management and the Kelly Criterion protect your capital during high-volatility seasons.</p>
+            </li>
+
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Caleb Murphy | Using Sports as a Day Trading Job</p>
+    </footer>
+
+</body>
+</html>
+
