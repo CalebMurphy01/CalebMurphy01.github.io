@@ -1,80 +1,72 @@
-/* style.css */
-
-/* 1. Base Styles & Typography */
+/* Base Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.7;
-    color: #2d3436;
-    background-color: #fafafa;
-    max-width: 850px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Safe customization: light neutral background */
 }
 
-/* 2. Header & Branding */
+/* Header and Navigation */
 header {
-    text-align: center;
-    margin-bottom: 50px;
-    border-bottom: 1px solid #dfe6e9;
-    padding-bottom: 30px;
+    border-bottom: 2px solid #007bff; /* Safe customization: brand color accent */
+    margin-bottom: 2rem;
 }
 
-h1 {
-    font-size: 2.2rem;
-    color: #1e272e;
-    margin-bottom: 10px;
-    line-height: 1.2;
-}
-
-.author {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-    color: #636e72;
-    font-weight: 600;
-}
-
-/* 3. The Post List (Required Class) */
 .post-list {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
+    display: flex;
+    gap: 20px;
 }
 
-.post-list li {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed #b2bec3;
-    transition: transform 0.2s ease;
-}
-
-/* Subtle hover effect for the list items */
-.post-list li:hover {
-    transform: translateX(5px);
-}
-
-.post-list a {
+.post-list li a {
     text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #0984e3; /* A professional blue */
+    color: #007bff;
+    font-weight: bold;
 }
 
-.post-list a:hover {
-    color: #d63031; /* Changes to a soft red on hover */
+.date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-left: 5px;
 }
 
-.post-date {
-    display: block;
-    font-size: 0.85rem;
-    color: #b2bec3;
-    margin-top: 5px;
+/* Post Content */
+.post-content h1 {
+    color: #212529;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* 4. Footer */
+.metadata {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #0056b3;
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+}
+
+ul, ol {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
 footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #95a5a6;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9rem;
 }
