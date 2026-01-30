@@ -3,49 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caleb Murphy's Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>The Ghost in the Dashboard | Caleb Murphy x Zay Amaro</title>
+    <style>
+        :root {
+            --market-blue: #0088ff;
+            --chaos-red: #ff3e3e;
+            --bg-black: #050505;
+            --text-dim: #8892b0;
+            --terminal-green: #00ff41;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: #e6edf3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Glitch Effect Header */
+        .header-container {
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        .ghost-title {
+            color: var(--chaos-red);
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* The Main Grid */
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Caleb's Feed (The Market) */
+        .market-feed h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--market-blue);
+            letter-spacing: 2px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .post-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .post-card:hover {
+            border-color: var(--market-blue);
+            transform: scale(1.01);
+        }
+
+        .post-card h3 {
+            margin: 0;
+            color: #58a6ff;
+            font-size: 1.2rem;
+        }
+
+        .post-date {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        /* Your Sidebar (The Ghost) */
+        .ghost-sidebar {
+            background: rgba(255, 62, 62, 0.03);
+            border-left: 2px solid var(--chaos-red);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .ghost-sidebar h2 {
+            color: var(--chaos-red);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .highlight-reply {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,62,62,0.1);
+        }
+
+        .highlight-reply:hover {
+            color: var(--chaos-red);
+        }
+
+        .highlight-reply span {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--chaos-red);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #444;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin-top: 20px; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Caleb Murphy's Blog</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a>
-        </nav>
+
+    <header class="header-container">
+        <span class="ghost-title">Detection: Human Variable</span>
+        <h1>The Ghost in the Dashboard</h1>
+        <p style="color: var(--text-dim);">Analyzing Prediction Markets, Safety Algorithms, and the 10% Void.</p>
     </header>
 
-    <main>
-        <ul class="post-list">
-            <li>
-                <a href="market-conviction.html">The Market for Conviction: Putting a Price on Belief</a>
-                <span class="date">January 26, 2026</span>
-            </li>
-            <li>
-                <a href="information-asymmetry.html">The Speed of Truth: Information Asymmetry in Prediction Markets</a>
-                <span class="date">January 26, 2026</span>
-            </li>
-            <li>
-                <a href="human-element-markets.html">The Human Element: Responding to Zay Amaro on Market Certainty</a>
-                <span class="date">January 26, 2026</span>
-            </li>
-            <li>
-                <a href="reading-the-tape.html">Reading the Tape: Mastering Tendencies on Kalshi and Polymarket</a>
-                <span class="date">January 26, 2026</span>
-            </li>
-            <li>
-                <a href="gamblers-pivot.html">The Gambler’s Pivot: How Kalshi Turns Sports Betting into Day Trading</a>
-                <span class="date">January 21, 2026</span>
-            </li>
-            <li>
-                <a href="first-post.html">Prediction Markets: A New Way to See Reality</a>
-                <span class="date">January 22, 2026</span>
-            </li>
-        </ul>
-    </main>
+    <div class="container">
+        <main class="market-feed">
+            <h2>Market Logs // Primary Feed</h2>
+            
+            <a href="market-conviction.html" class="post-card">
+                <span class="post-date">Jan 26, 2026</span>
+                <h3>The Market for Conviction</h3>
+                <p style="color: #8b949e; font-size: 0.9rem;">How prediction markets turn belief into a tradeable asset.</p>
+            </a>
+
+            <a href="information-asymmetry.html" class="post-card">
+                <span class="post-date">Jan 26, 2026</span>
+                <h3>The Speed of Truth</h3>
+                <p style="color: #8b949e; font-size: 0.9rem;">Information flow and the efficiency of Kalshi terminals.</p>
+            </a>
+
+            <a href="gamblers-pivot.html" class="post-card">
+                <span class="post-date">Jan 21, 2026</span>
+                <h3>The Gambler’s Pivot</h3>
+                <p style="color: #8b949e; font-size: 0.9rem;">Turning sports betting into sophisticated day trading.</p>
+            </a>
+        </main>
+
+        <aside class="ghost-sidebar">
+            <h2>GHOST_IN_THE_MACHINE</h2>
+            
+            <a href="ghost_in_the_dashboard.html" class="highlight-reply">
+                <span>RE: MARKETS & METRICS</span>
+                <strong>The 10% Void</strong>
+                <p style="font-size: 0.8rem; color: var(--text-dim); margin: 5px 0 0;">Why the most important moments can't be priced.</p>
+            </a>
+
+            <a href="ghost_in_the_dashboard.html" class="highlight-reply">
+                <span>RE: SAFETY ALGORITHMS</span>
+                <strong>Engineering the Hero Out</strong>
+                <p style="font-size: 0.8rem; color: var(--text-dim); margin: 5px 0 0;">The failure of digital athlete safety models.</p>
+            </a>
+
+            <div style="margin-top: 30px; font-size: 0.7rem; font-family: monospace; color: #444;">
+                &gt; UNPRICED_CHAOS: DETECTED<br>
+                &gt; ALGORITHM_STATUS: INCOMPLETE
+            </div>
+        </aside>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Caleb Murphy</p>
+        © 2026 Caleb Murphy | Responses by Zay Amaro
     </footer>
+
 </body>
 </html>
